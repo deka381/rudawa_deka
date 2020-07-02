@@ -73,7 +73,7 @@ header{
 .plan-trip{
   padding-top: 70px;
   padding-bottom: 70px;
-  & h1{
+  & h2{
     text-align: center;
     font-size: 35px;
   }
@@ -91,46 +91,131 @@ header{
         cursor: pointer;
         transition: background-color .3s ease-in;
         color:#212529;
-        &:hover{
+        &:hover,&.active_trip{
           background-color: #dcdcdc;
         }
       }
       & li.plan-trip_btns_2{
-        border-color:#009e5f;
-        &:hover{
-          background-color:#009e5f;
+        border-color:$green;
+        &:hover, &.active_trip{
+          background-color:$green;
         }
       }
       & li.plan-trip_btns_3{
-        border-color:#35a2e7;
-        &:hover{
-          background-color: #35a2e7;
+        border-color:$blue;
+        &:hover, &.active_trip{
+          background-color: $blue;
         }
       }
       & li.plan-trip_btns_4{
-        border-color:#d1831d;
-        &:hover{
-          background-color: #d1831d;
+        border-color:$orange;
+        &:hover,&.active_trip{
+          background-color: $orange;
         }
       }
       & li.plan-trip_btns_5{
-        border-color:#7bb6ba;
-        &:hover{
-          background-color: #7bb6ba;
+        border-color: $turq;
+        &:hover, &.active_trip{
+          background-color: $turq;
         }
       }
     }
   }
   & .map{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     & .map_picker{
+      position: absolute;
+      height: 80%;
+      width: 80%;
       & .map_pic{
         display:block;
         width:10px;
         height:10px;
-        background-color: blue;
+        background-color: $blue;
         z-index: 99;
         border-radius: 50px;
         position: absolute;
+      }
+      & .orange-pick{
+        background-color: $orange;
+      }
+      & .green-pick{
+        background-color: $green;
+      }
+      & .turq-pick{
+        background-color: $turq;
+      }
+
+    }
+  }
+}
+.attractions{
+  & .news_box{
+    border:1px solid #dcdcdc;
+    height: 380px;
+    margin-bottom: 10px;
+    &.green-slide{
+      border-bottom:4px solid $green;
+    }
+    &.blue-slide{
+      border-bottom:4px solid $blue;
+    }
+    &.orange-slide{
+      border-bottom:4px solid $orange;
+    }
+    &.turq-slide{
+      border-bottom:4px solid $turq;
+    }
+  }
+  & .slick-list{
+    margin: -10px -10px;
+    & .slick-slide  {
+      outline: none !important;
+      margin: 10px 10px;
+      & .news_img{
+        width:100%;
+        height: 100%;
+      }
+      & .news_content{
+        padding: 10px 15px;
+        height: 170px;
+        & .news_title{
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          & h4{
+            font-weight: bold;
+            font-size:18px;
+            line-height: 22px;
+            color: $four-text-color;
+          }
+        }
+        & .news_btn{
+            height: 40px;
+            width: 172px;
+            border: 2px solid #dcdcdc;
+            background: #fff;
+            text-transform: uppercase;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover{
+                border: 2px solid #000;
+              a{
+                color: $first-text-color;
+              }
+            }
+            & a{
+              font-size: 12px;
+              font-weight: 500;
+              color: $four-text-color;
+            }
+        }
       }
     }
   }

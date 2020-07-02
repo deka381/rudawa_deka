@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="./font/font-awesome-4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   </head>
   <body>
     <!-- HEADER START -->
@@ -45,40 +48,404 @@
     </section>
     <section class="plan-trip">
       <div class="container">
-        <h1>Zaplanuj wycieczkę</h1>
+        <h2>Zaplanuj wycieczkę</h2>
         <div class="plan-trip_btns">
           <ul>
-            <li class="plan-trip_btns_1">Wszystkie</li>
-            <li class="plan-trip_btns_2">Kategoria 1</li>
-            <li class="plan-trip_btns_3">Kategoria 2</li>
-            <li class="plan-trip_btns_4">Kategoria 3</li>
-            <li class="plan-trip_btns_5">Kategoria 4</li>
+            <li class="plan-trip_btns_1 active_trip" data-color="all">Wszystkie</li>
+            <li class="plan-trip_btns_2" data-color="green">Kategoria 1</li>
+            <li class="plan-trip_btns_3" data-color="blue">Kategoria 2</li>
+            <li class="plan-trip_btns_4" data-color="orange">Kategoria 3</li>
+            <li class="plan-trip_btns_5" data-color="turq">Kategoria 4</li>
           </ul>
         </div>
         <div class="map">
           <div class="map_picker">
-            <div class="map_pic blue-pick"></div>
-            <div class="map_pic blue-pick"></div>
-            <div class="map_pic blue-pick"></div>
-            <div class="map_pic red-pick"></div>
-            <div class="map_pic red-pick"></div>
-            <div class="map_pic red-pick"></div>
-            <div class="map_pic green-pick"></div>
-            <div class="map_pic green-pick"></div>
-            <div class="map_pic green-pick"></div>
-            <div class="map_pic pink-pick"></div>
-            <div class="map_pic pink-pick"></div>
-            <div class="map_pic pink-pick"></div>
+            <div class="map_pic blue-pick" data-color="blue" title="przykładowy tekst"></div>
+            <div class="map_pic blue-pick" data-color="blue" title="przykładowy tekst"></div>
+            <div class="map_pic blue-pick" data-color="blue" title="przykładowy tekst"></div>
+            <div class="map_pic orange-pick" data-color="orange" title="przykładowy tekst"></div>
+            <div class="map_pic orange-pick" data-color="orange" title="przykładowy tekst"></div>
+            <div class="map_pic orange-pick" data-color="orange" title="przykładowy tekst"></div>
+            <div class="map_pic green-pick" data-color="green" title="przykładowy tekst"></div>
+            <div class="map_pic green-pick" data-color="green" title="przykładowy tekst"></div>
+            <div class="map_pic green-pick" data-color="green" title="przykładowy tekst"></div>
+            <div class="map_pic turq-pick" data-color="turq" title="przykładowy tekst"></div>
+            <div class="map_pic turq-pick" data-color="turq" title="przykładowy tekst"></div>
+            <div class="map_pic turq-pick" data-color="turq" title="przykładowy tekst"></div>
           </div>
           <img src="img/map.jpg" alt="mapa" />
+        </div>
+      </div>
+    </section>
+    <section class="attractions">
+      <div class="container">
+        <h2>Atrakcje regionu</h2>
+        <div id="nwes_all" class="news_row">
+          <div class="home-slider-wrapper">
+	        <div class="arrow left-arrow"></div>
+	        <div class="arrow right-arrow"></div>
+  	        <div class="home-slider">
+              <div class="news_box slide green-slide" data-color="green">
+                  <div class="news_img">
+                    <img src="/img/ehrenfriedersdorf.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide green-slide" data-color="green">
+                  <div class="news_img">
+                    <img src="/img/rother-berg.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide green-slide">
+                  <div class="news_img">
+                    <img src="/img/legendary-mine-uran.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide green-slide">
+                  <div class="news_img">
+                    <img src="/img/buchholz.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide green-slide">
+                  <div class="news_img">
+                    <img src="/img/rother-berg.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide green-slide">
+                  <div class="news_img">
+                    <img src="/img/ehrenfriedersdorf.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide green-slide">
+                  <div class="news_img">
+                    <img src="/img/legendary-mine-uran.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide green-slide">
+                  <div class="news_img">
+                    <img src="/img/ehrenfriedersdorf.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide blue-slide">
+                  <div class="news_img">
+                    <img src="/img/chistmas-traditions.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide blue-slide">
+                  <div class="news_img">
+                    <img src="/img/rother-berg.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide blue-slide">
+                  <div class="news_img">
+                    <img src="/img/ehrenfriedersdorf.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide blue-slide">
+                  <div class="news_img">
+                    <img src="/img/buchholz.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide blue-slide">
+                  <div class="news_img">
+                    <img src="/img/chistmas-traditions.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide blue-slide">
+                  <div class="news_img">
+                    <img src="/img/legendary-mine-uran.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide blue-slide">
+                  <div class="news_img">
+                    <img src="/img/ehrenfriedersdorf.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide blue-slide">
+                  <div class="news_img">
+                    <img src="/img/rother-berg.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide orange-slide">
+                  <div class="news_img">
+                    <img src="/img/chistmas-traditions.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide orange-slide">
+                  <div class="news_img">
+                    <img src="/img/buchholz.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide orange-slide">
+                  <div class="news_img">
+                    <img src="/img/ehrenfriedersdorf.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide orange-slide">
+                  <div class="news_img">
+                    <img src="/img/chistmas-traditions.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide orange-slide">
+                  <div class="news_img">
+                    <img src="/img/mining-souvenirs.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide orange-slide">
+                  <div class="news_img">
+                    <img src="/img/legendary-mine-uran.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide orange-slide">
+                  <div class="news_img">
+                    <img src="/img/chistmas-traditions.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide orange-slide">
+                  <div class="news_img">
+                    <img src="/img/mining-souvenirs.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide turq-slide">
+                  <div class="news_img">
+                    <img src="/img/ehrenfriedersdorf.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide turq-slide">
+                  <div class="news_img">
+                    <img src="/img/rother-berg.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide turq-slide">
+                  <div class="news_img">
+                    <img src="/img/buchholz.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide turq-slide">
+                  <div class="news_img">
+                    <img src="/img/chistmas-traditions.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide turq-slide">
+                  <div class="news_img">
+                    <img src="/img/legendary-mine-uran.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide turq-slide">
+                  <div class="news_img">
+                    <img src="/img/chistmas-traditions.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide turq-slide">
+                  <div class="news_img">
+                    <img src="/img/mining-souvenirs.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_box slide turq-slide">
+                  <div class="news_img">
+                    <img src="/img/legendary-mine-uran.jpg" alt="atrakcja">
+                    <div class="news_content">
+                      <div class="news_title">
+                        <h4>Atrakcja</h4>
+                        <div class="news_btn"><a href="#">Dowiedz się więcej</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
 
 
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="/js/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   </body>
