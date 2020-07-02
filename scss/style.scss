@@ -1,5 +1,63 @@
 @import "settings";
 
+*{
+  font-family: 'Montserrat', sans-serif;
+}
 body{
   background-color: $color-bg;
+}
+.container{
+   // max-width: 1280px !important;
+}
+
+header{
+  background-color:$color-sec-bg;
+  & .top-header_social-links{
+    display: flex;
+    justify-content: flex-end;
+    & ul{
+      display: flex;
+      & li{
+        background: $color-thi-bg;
+        padding: 10px 15px;
+        &:hover{
+          cursor: pointer;
+        }
+        & i{
+          font-size: 25px;
+          color: $first-text-color;
+        }
+      }
+    }
+  }
+  & .main-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & .menu-header{
+      margin-top: 20px;
+      & ul.menu-header_desptop-menu{
+        display: flex;
+        flex-direction: row;
+        & li{
+          margin: 0 10px;
+          &:hover{
+            & a{
+              color:$thi-text-color;
+              text-decoration: none;
+              transition: color .2s ease-in-out;
+            }
+          }
+          & a{
+            color:$sec-text-color;
+            font-weight: 900;
+            font-size: 15px;
+            line-height: 23px;
+            text-transform: uppercase;
+            transition: color .5s ease-in-out;
+          }
+        }
+      }
+    }
+  }
 }
